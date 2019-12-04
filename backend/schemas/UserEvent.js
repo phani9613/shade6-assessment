@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');  
 var UserEventSchema = new mongoose.Schema({  
-  name: String,
-  type: String,
-  members_count: Number
+  user_id: String,
+  event_id: String,
+  
 });
 mongoose.model('UserEvent', UserEventSchema);
 
