@@ -12,8 +12,10 @@ import { MaterialModule } from './material.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MyFestServiceService } from './service/my-fest-service.service';
-import { HomeComponent } from './app/home/home.component';
+import { HomeComponent, DialogDataExampleDialog } from './app/home/home.component';
 import { EventNavComponent } from './app/event-nav/event-nav.component';
+import { FavouritesComponent } from './app/favourites/favourites.component';
+import { EventComponent } from './app/event/event.component';
 
 
 @NgModule({
@@ -22,7 +24,10 @@ import { EventNavComponent } from './app/event-nav/event-nav.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    EventNavComponent
+    EventNavComponent,
+    EventComponent,
+    DialogDataExampleDialog,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,9 @@ import { EventNavComponent } from './app/event-nav/event-nav.component';
 
     
   ],
+  entryComponents: [
+    DialogDataExampleDialog,
+],
   providers: [MyFestServiceService],
   bootstrap: [AppComponent]
 })

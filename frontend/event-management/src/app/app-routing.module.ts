@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './app/home/home.component';
 import { AuthGuard } from './authguard/authguard';
+import { FavouritesComponent } from './app/favourites/favourites.component';
+import { EventComponent } from './app/event/event.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,16 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: "favourites",
+    component: FavouritesComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: "event",
+    component: EventComponent,
     canActivate:[AuthGuard]
   }
 

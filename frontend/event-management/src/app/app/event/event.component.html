@@ -1,0 +1,37 @@
+<div class=" container" style="margin-top:100px;">
+        <div class="row">
+          <div class="offset-md-4 col-md-6">
+        <mat-card>  
+            <mat-card-header>
+                <mat-card-title style="color:#8E54E9 !important">Create Event</mat-card-title>
+            </mat-card-header>
+            <hr>
+            <mat-card-content>
+      <div class="example-container">
+       
+       <mat-form-field
+            [hideRequiredMarker]="options.value.hideRequired"
+            [floatLabel]="options.value.floatLabel">
+          <input  [(ngModel)]="obEvent.name" matInput placeholder="Name" required>
+        </mat-form-field>
+       
+        <mat-form-field
+            [hideRequiredMarker]="options.value.hideRequired"
+            [floatLabel]="options.value.floatLabel">
+          <input  [(ngModel)]="obEvent.type" matInput placeholder="eg. InDoor, OutDoor" required>
+        </mat-form-field>
+      
+        <mat-form-field  [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+          <input  type="number" [(ngModel)]="obEvent.members_count" matInput placeholder="Member Count" required>
+        </mat-form-field>
+        <button mat-flat-button color="primary" (click)="addEvent()">Add Event</button>
+       
+      </div>
+      </mat-card-content>
+  
+      </mat-card>
+      </div>
+      </div>
+      </div>
+      

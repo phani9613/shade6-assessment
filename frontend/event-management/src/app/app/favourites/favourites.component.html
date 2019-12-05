@@ -1,20 +1,24 @@
 <app-event-nav></app-event-nav>
-
+<div *ngIf="events.length==0" class="tournaments-display">
+  <p class="middle">No Favourite Events Added</p>
+</div>
+<p *ngIf="events.length>0"  style="margin-left:40%">Hurray!!!!! You have Registered for {{events_count}} Events</p>
 <div class="tournaments-display">
+   
     <mat-card class="card" *ngFor="let event of events; let rowIndex=index">
       <mat-card-header>
       
         <mat-card-title >Event: {{rowIndex+1}} </mat-card-title>
-        <mat-card-subtitle>{{event?.name}}</mat-card-subtitle>
+        <mat-card-subtitle>{{event?.event_name}}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="../assets/images/match-image.jpg" alt="Photo of a event" class="pubg-image">
       <mat-card-content>
         <p>
-        {{event?.type}}
+        {{event?.event_type}}
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button class="addButton" color='primary' style="float: right;" (click)="deleteFromFavourite(event)" >Add to Favourite</button>
+        <button mat-raised-button class="addButton" color='primary' style="float: right;" (click)="deleteFromFavourite(event)" >Delete From Favourite</button>
       </mat-card-actions>
     </mat-card>
     </div>

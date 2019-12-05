@@ -34,6 +34,7 @@ get diagnostic():any{
       (res:any)=>{
         if(res[0]._id){
           localStorage.setItem("obUser",JSON.stringify(res));
+          localStorage.setItem("userId",res[0]._id);
           //this.sharingService.emitLoginChange();
           this.snackBar.open('Login Successful', 'Ok', {
             duration: 1000

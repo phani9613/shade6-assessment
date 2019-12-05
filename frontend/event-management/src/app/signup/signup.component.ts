@@ -32,7 +32,7 @@ get diagnostic():any{
     this._service.doSignup(this.obUser).subscribe(
       (res:any)=>{
        
-        if(res.messsage == "Success"){
+        if(res._id){
         this.snackBar.open('Succefully Registered','Ok',{
           duration:2000
         })
@@ -43,12 +43,9 @@ get diagnostic():any{
             this.router.navigate(["/login"]);
         }, 1000);
     
-         // var xx:any=JSON.parse(localStorage.getItem("obUser"));
-          //console.log(xx.userId);
-          //console.log(localStorage.getItem("obUser")."userId");
-         
+      
        }else{
-      //   console.log("else res");
+   
           alert("Problem");
            this.router.navigate(["/signup"]);
        }
