@@ -1,0 +1,21 @@
+<app-event-nav></app-event-nav>
+
+<div class="tournaments-display">
+    <mat-card class="card" *ngFor="let event of events; let rowIndex=index">
+      <mat-card-header>
+      
+        <mat-card-title >Event: {{rowIndex+1}} </mat-card-title>
+        <mat-card-subtitle>{{event?.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="../assets/images/match-image.jpg" alt="Photo of a event" class="pubg-image">
+      <mat-card-content>
+        <p>
+        {{event?.type}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="addButton" color='primary' style="float: right;" (click)="doSaveAsFavourite(event)" >Add to Favourite</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+  

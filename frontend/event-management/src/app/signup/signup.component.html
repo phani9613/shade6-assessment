@@ -1,0 +1,51 @@
+<div class=" container" style="margin-top:100px;">
+  <div class="row">
+    <div class="offset-md-4 col-md-6">
+  <mat-card>  
+      <mat-card-header>
+          <mat-card-title style="color:#8E54E9">Signup</mat-card-title>
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+<div class="example-container">
+ 
+ <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+    <input  [(ngModel)]="obUser.name" matInput placeholder="Name" required>
+  </mat-form-field>
+ <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+    <input  [(ngModel)]="obUser.mobile" matInput placeholder="Mobile" required>
+  </mat-form-field>
+ <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+    <input  [(ngModel)]="obUser.stream" matInput placeholder="Stream" required>
+  </mat-form-field>
+   <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+    <input  [(ngModel)]="obUser.course" matInput placeholder="Course" required>
+  </mat-form-field>
+
+  <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+    <input  [(ngModel)]="obUser.email" matInput placeholder="email" required>
+  </mat-form-field>
+
+  <mat-form-field  [hideRequiredMarker]="options.value.hideRequired"
+  [floatLabel]="options.value.floatLabel">
+    <input  type="password" [(ngModel)]="obUser.password" matInput placeholder="Password" required>
+  </mat-form-field>
+  <button mat-flat-button color="primary" (click)="onSignup()">Signup</button>
+ 
+</div>
+</mat-card-content>
+<a class="mytext" routerLink="/login">Already a Member? Login here</a>
+</mat-card>
+</div>
+</div>
+</div>

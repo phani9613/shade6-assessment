@@ -1,0 +1,7 @@
+<mat-toolbar class="color-cls">
+    <span>My Events</span>
+    <button class="pull-right btn btn-primary"  *ngIf="obUser" routerLink="/favourites">My Favourites</button>
+    <button class="pull-right btn btn-danger"  *ngIf="obUser" routerLink="/login" (click)="doLogout()">Logout</button>
+  
+    <button class="pull-right"  *ngIf="!obUser" routerLink="/login">Login</button>
+  </mat-toolbar>
