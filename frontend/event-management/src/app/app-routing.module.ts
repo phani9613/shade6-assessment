@@ -13,23 +13,28 @@ const routes: Routes = [
     path: "",
     component: LoginComponent
   },
-  { path: "login", component: LoginComponent },
-
-  { path: "signup", component: SignupComponent },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "signup",
+    component: SignupComponent
+  },
   {
     path: "home",
     component: HomeComponent,
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: "favourites",
     component: FavouritesComponent,
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: "event",
     component: EventComponent,
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   }
 
 ];
