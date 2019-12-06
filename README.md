@@ -1,6 +1,13 @@
 # shade6-assessment
 It's an Application for event management. Here in this application, any one create and post event and the rest of the members can add/delete it to/from his favourite list.
- 
+
+##Tasks one can do in this application
+1. Signup as a user
+2. Login as a user
+3. create an event
+4. update an event
+5. add event to favourite list
+6. delete event from favourite list
 
 # Softwares Required   
 1. NodeJS
