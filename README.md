@@ -1,4 +1,6 @@
 # shade6-assessment
+It's an Application for event management. Here in this application, any one create and post event and the rest of the members can add/delete it to/from his favourite list.
+ 
 
 # Softwares Required   
 1. NodeJS
